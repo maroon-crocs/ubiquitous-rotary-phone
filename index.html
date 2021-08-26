@@ -15,6 +15,7 @@
     <title>Shree Vardhaman Creations</title>
 
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/intlTelInput.css" />
     <link href="css/font-awesome.min.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/responsive.css" rel="stylesheet" />
@@ -219,6 +220,91 @@
       </div>
     </section>
 
+    <section class="contact_section layout_padding">
+      <div class="container">
+        <div class="heading_container heading_center mb-4">
+          <h2>Contact Us</h2>
+        </div>
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-6">
+            <div class="contact_form">
+              <form method="POST" onsubmit="process(event)">
+                <div class="form-group">
+                  <input type="text" placeholder="Name" name="name" />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder="Establishment Name"
+                    name="establishment-name"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder="Establishment Area"
+                    name="establishment-area"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    id="phone"
+                    type="tel"
+                    name="phone"
+                    placeholder="Contact/WhatsApp No."
+                  />
+                </div>
+                <div class="form-group">
+                  <input type="email" placeholder="Email" name="email" />
+                </div>
+                <div class="form-group">
+                  <input type="hidden" name="_template" value="basic" />
+                  <input
+                    type="hidden"
+                    name="_subject"
+                    value="Form submission at svcreations.com"
+                  />
+                  <input type="text" name="_honey" style="display: none" />
+                  <input type="submit" class="button" value="Submit" />
+
+                  <div
+                    class="alert alert-success alert-dismissible mt-3 d-none"
+                    role="alert"
+                  >
+                    <strong>Success!</strong> We'll get back to you at the
+                    earliest.
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="alert"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div
+                    class="alert alert-danger alert-dismissible mt-3 d-none"
+                    role="alert"
+                  >
+                    <strong>Failed</strong> Something went wrong, try reaching
+                    out to us using our contact details below.
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="alert"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="info_section layout_padding2">
       <div class="container">
         <div class="row info_main_row">
@@ -270,6 +356,7 @@
 
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/intlTelInput.min.js"></script>
     <script src="js/custom.js"></script>
   </body>
 </html>

@@ -28,3 +28,45 @@ $(document).on("click", '[data-toggle="lightbox"]', function (event) {
   event.preventDefault();
   $(this).ekkoLightbox();
 });
+
+const phoneInputField = document.querySelector("#phone");
+const phoneInput = window.intlTelInput(phoneInputField, {
+  initialCountry: "in",
+  separateDialCode: true,
+  preferredCountries: ["in"],
+  utilsScript: "js/intlTelInput-utils.min.js",
+});
+
+function process(event) {
+  event.preventDefault();
+
+  var name = document.querySelector('input[name="name"]').value;
+  var establishmentName = document.querySelector(
+    'input[name="establishment-name"]'
+  ).value;
+  var establishmentArea = document.querySelector(
+    'input[name="establishment-area"]'
+  ).value;
+  var phone = phoneInput.getNumber();
+  var email = document.querySelector('input[name="email"]').value;
+
+  $.ajax({
+    method: "POST",
+    url: "https://formsubmit.co/ajax/svcreations996@gmail.com",
+    dataType: "json",
+    accepts: "application/json",
+    data: {
+      name: name,
+      establishment_name: establishmentName,
+      establishment_area: establishmentArea,
+      phone: phone,
+      email: email,
+    },
+    success: (data) => {
+      $(".alert-success").addClass("show");
+    },
+    error: (err) => {
+      $(".alert-danger").addClass("show");
+    },
+  });
+}
