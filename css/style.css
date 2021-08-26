@@ -938,6 +938,7 @@ a:focus {
   align-items: center;
   color: #ffffff;
   margin-bottom: 10px;
+  margin-left: 10px;
 }
 
 .info_section .info_contact a i {
@@ -947,6 +948,19 @@ a:focus {
 
 .info_section .info_contact a:hover:hover {
   color: #fc425c;
+}
+
+.info_section .info-item {
+  display: flex;
+}
+
+.info_section .info-item a {
+  margin-bottom: 0;
+}
+
+.info_section .info-item i {
+  display: flex;
+  align-items: center;
 }
 
 /* footer section*/
