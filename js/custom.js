@@ -64,9 +64,11 @@ function process(event) {
     },
     success: (data) => {
       $(".alert-success").addClass("show");
+      $(".alert-success").toggleClass("d-none");
     },
     error: (err) => {
       $(".alert-danger").addClass("show");
+      $(".alert-danger").toggleClass("d-none");
     },
   });
 }
